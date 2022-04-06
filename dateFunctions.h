@@ -111,7 +111,7 @@ public:
         int month2, date2;
         revoffsetDays(offset2, year2, &date2, &month2);
 
-        string s = to_string(date2) + " " + to_string(month2) + " " + to_string(year2);
+        string s = to_string(date2) + "/" + to_string(month2) + "/" + to_string(year2);
         return s;
     }
 };

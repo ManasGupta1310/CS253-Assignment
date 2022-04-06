@@ -74,51 +74,6 @@ void professorPortal(Professor professor)
     }
 }
 
-vector<vector<string>> professorIssuedBooks(string searchKey)
-{
-    string fname = "bookList.csv";
-    vector<vector<string>> content;
-    vector<string> row;
-    string line, word;
-
-    fstream file(fname, ios::in);
-    if (file.is_open())
-    {
-
-        while (getline(file, line))
-        {
-            row.clear();
-
-            stringstream str(line);
-            while (getline(str, word, ','))
-                row.push_back(word);
-
-            string id;
-            id = row[4];
-            transform(id.begin(), id.end(), id.begin(), ::tolower);
-            transform(searchKey.begin(), searchKey.end(), searchKey.begin(), ::tolower);
-
-            int index_str;
-            if (id == searchKey)
-            {
-                vector<string> book;
-                book.push_back(row[0]);
-                book.push_back(row[1]);
-                book.push_back(row[2]);
-                book.push_back(row[3]);
-                book.push_back(row[5]);
-                book.push_back(row[6]);
-                content.push_back(book);
-            }
-        }
-    }
-    else
-        cout << "\n>> Could not open the file\n"
-             << endl;
-
-    return content;
-}
-
 void loginAsProfessor()
 {
     cout << "-------Professor Login-------" << endl;
@@ -153,8 +108,9 @@ void loginAsProfessor()
                          << endl;
                     loggedIn = 1;
 
-                    vector<vector<string>> books = professorIssuedBooks(username);
                     string name = row[0];
+                    User user(name, username, password);
+                    vector<vector<string>> books = user.userIssuedBooks(username);
                     int fine = stoi(row[4]);
 
                     Professor professor(name, username, password, fine, books);

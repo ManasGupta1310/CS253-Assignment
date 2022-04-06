@@ -112,7 +112,7 @@ public:
                     time_t now = time(0);
                     tm *ltm = localtime(&now);
 
-                    string issuedate = to_string(ltm->tm_mday) + " " + to_string(1 + ltm->tm_mon) + " " + to_string(1900 + ltm->tm_year);
+                    string issuedate = to_string(ltm->tm_mday) + "/" + to_string(1 + ltm->tm_mon) + "/" + to_string(1900 + ltm->tm_year);
                     string duedate;
                     if (role == "student")
                     {
@@ -169,7 +169,7 @@ public:
                     time_t now = time(0);
                     tm *ltm = localtime(&now);
 
-                    string issuedate = to_string(ltm->tm_mday) + " " + to_string(1 + ltm->tm_mon) + " " + to_string(1900 + ltm->tm_year);
+                    string issuedate = to_string(ltm->tm_mday) + "/" + to_string(1 + ltm->tm_mon) + "/" + to_string(1900 + ltm->tm_year);
                     string duedate;
                     if (role == "student")
                     {
@@ -200,6 +200,7 @@ public:
             {
                 cout << endl;
                 cout << "Issued to: " << id << endl;
+                cout << "Please return the book within due date to avoid any fine amount!" << endl;
                 addIssuedBook(id, isbn, role);
             }
             else
@@ -211,6 +212,7 @@ public:
         {
             cout << endl;
             cout << "Issued to: " << id << endl;
+            cout << "Please return the book within due date to avoid any fine amount!" << endl;
             addIssuedBook(id, isbn, role);
         }
     }

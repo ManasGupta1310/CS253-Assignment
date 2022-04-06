@@ -27,6 +27,51 @@ public:
     {
         return id;
     }
+
+    vector<vector<string>> userIssuedBooks(string searchKey)
+    {
+        string fname = "bookList.csv";
+        vector<vector<string>> content;
+        vector<string> row;
+        string line, word;
+
+        fstream file(fname, ios::in);
+        if (file.is_open())
+        {
+
+            while (getline(file, line))
+            {
+                row.clear();
+
+                stringstream str(line);
+                while (getline(str, word, ','))
+                    row.push_back(word);
+
+                string id;
+                id = row[4];
+                transform(id.begin(), id.end(), id.begin(), ::tolower);
+                transform(searchKey.begin(), searchKey.end(), searchKey.begin(), ::tolower);
+
+                int index_str;
+                if (id == searchKey)
+                {
+                    vector<string> book;
+                    book.push_back(row[0]);
+                    book.push_back(row[1]);
+                    book.push_back(row[2]);
+                    book.push_back(row[3]);
+                    book.push_back(row[5]);
+                    book.push_back(row[6]);
+                    content.push_back(book);
+                }
+            }
+        }
+        else
+            cout << "\n>> Could not open the file\n"
+                 << endl;
+
+        return content;
+    }
 };
 
 const int monthDays[12] = {31, 28, 31, 30, 31, 30,
@@ -122,7 +167,7 @@ public:
             cout << "\n>> Could not open the file\n"
                  << endl;
         cout << "Fine amount: Rs." << amount << endl;
-        cout<<endl;
+        cout << endl;
         this->fine_amount = amount;
     }
 
@@ -178,7 +223,7 @@ public:
         getName();
     }
 
-    void  getFineAmount()
+    void getFineAmount()
     {
         cout << "Fine amount: Rs." << fine_amount << endl;
     }
@@ -299,7 +344,7 @@ public:
             cout << "\n>> Could not open the file\n"
                  << endl;
         cout << "Fine amount: Rs." << amount << endl;
-        cout<<endl;
+        cout << endl;
         this->fine_amount = amount;
     }
 
@@ -355,7 +400,7 @@ public:
         getName();
     }
 
-    void  getFineAmount()
+    void getFineAmount()
     {
         cout << "Fine amount: Rs." << fine_amount << endl;
     }

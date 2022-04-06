@@ -1,7 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include "bookDatabase.h"
-#include "user.h"
 
 using namespace std;
 
@@ -18,7 +17,7 @@ void librarianUserPortal(Librarian librarian)
     cout << "3. Add a user" << endl;
     cout << "4. Delete a user" << endl;
     cout << "5. Update a user" << endl;
-
+    cout << "6. Clear fine of user" << endl;
 
     cout << "0. Exit" << endl;
     cout << "---------------------------------------" << endl;
@@ -57,7 +56,11 @@ void librarianUserPortal(Librarian librarian)
         user.setListOfUsers();
         librarianUserPortal(librarian);
         break;
-
+    case 6: 
+        user.clear_fine();
+        user.setListOfUsers();
+        librarianUserPortal(librarian);
+        break;
     case 0:
         break;
     default:

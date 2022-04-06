@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
+#include "user.h"
 
 using namespace std;
 
@@ -400,4 +401,79 @@ public:
         return false;
     }
 
+    void clear_fine()
+    {
+        string fname = "userList.csv";
+
+        vector<vector<string>> content;
+        vector<string> row;
+        string line, word;
+
+        fstream file(fname, ios::in);
+        string searchKey;
+        cout << ">> Enter the ID of the user you want to clear fine of: ";
+        cin >> searchKey;
+        if (file.is_open())
+        {
+            int found = 0;
+            while (getline(file, line))
+            {
+                row.clear();
+
+                stringstream str(line);
+                while (getline(str, word, ','))
+                    row.push_back(word);
+
+                string id;
+                id = row[1];
+                transform(id.begin(), id.end(), id.begin(), ::tolower);
+                transform(searchKey.begin(), searchKey.end(), searchKey.begin(), ::tolower);
+
+                int index_str;
+                if (id == searchKey || (index_str = id.find(searchKey) != string::npos))
+                {
+                    found++;
+                    cout << "---------------------------------------" << endl;
+                    cout << "Name: " << row[0] << endl;
+                    cout << "ID: " << row[1] << endl;
+                    cout << "Role: " << row[3] << endl;
+                    cout << "Fine: " << row[4] << endl;
+                    cout << "Book issued: " << row[5] << endl;
+                    cout << "---------------------------------------\n"
+                         << endl;
+
+                    if (row[3] == "student")
+                    {
+                        User user(row[0], row[1], row[2]);
+                        vector<vector<string>> books = user.userIssuedBooks(row[1]);
+                        int fine = stoi(row[4]);
+
+                        Student student(row[0], row[1], row[2], stoi(row[4]), books);
+                        student.clear_fine_amount();
+                        student.updateStudentFine();
+                    }
+                    else if (row[3] == "professor")
+                    {
+                        User user(row[0], row[1], row[2]);
+                        vector<vector<string>> books = user.userIssuedBooks(row[1]);
+                        int fine = stoi(row[4]);
+
+                        Professor professor(row[0], row[1], row[2], stoi(row[4]), books);
+                        professor.clear_fine_amount();
+                        professor.updateProfessorFine();
+                    }
+
+                    cout << "Fine cleared!\n"
+                         << endl;
+                }
+            }
+
+            if (found == 0)
+                cout << ">> No such user found!" << endl;
+            cout << endl;
+        }
+        else
+            cout << "\n>> Could not open the file\n"
+                 << endl;
+    }
 };
