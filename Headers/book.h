@@ -15,7 +15,7 @@ private:
     string issue_date;
 
 public:
-    Book(string title, string author, string publisher, string isbn, string issued_to, string issue_date, string duedate)
+    Book(string title, string author, string isbn, string publisher, string issued_to, string issue_date, string duedate)
     {
         this->title = title;
         this->author = author;

@@ -100,6 +100,10 @@ public:
         this->list_of_books = list_of_books;
     }
 
+    void setIssuedBooks(){
+        this->list_of_books = userIssuedBooks(getId());
+    }
+
     void calculate_fine()
     {
         int amount = 0;
@@ -166,7 +170,7 @@ public:
         else
             cout << "\n>> Could not open the file\n"
                  << endl;
-        cout << "Fine amount: Rs." << amount << endl;
+        cout << ">> Fine amount: Rs." << amount << endl;
         cout << endl;
         this->fine_amount = amount;
     }
@@ -225,7 +229,7 @@ public:
 
     void getFineAmount()
     {
-        cout << "Fine amount: Rs." << fine_amount << endl;
+        cout << ">> Fine amount: Rs." << fine_amount << endl;
     }
 
     string getStudentId()
@@ -237,7 +241,7 @@ public:
     {
         if (list_of_books.size() > 0)
         {
-            cout << "Issued Books: " << endl;
+            cout << ">> Issued Books: " << endl;
             for (int i = 0; i < list_of_books.size(); i++)
             {
                 cout << "---------------------------------------" << endl;
@@ -277,6 +281,10 @@ public:
         this->list_of_books = list_of_books;
     }
 
+    void setIssuedBooks(){
+        this->list_of_books = userIssuedBooks(getId());
+    }
+    
     void calculate_fine()
     {
         int amount = 0;
@@ -343,7 +351,7 @@ public:
         else
             cout << "\n>> Could not open the file\n"
                  << endl;
-        cout << "Fine amount: Rs." << amount << endl;
+        cout << ">> Fine amount: Rs." << amount << endl;
         cout << endl;
         this->fine_amount = amount;
     }
@@ -402,7 +410,7 @@ public:
 
     void getFineAmount()
     {
-        cout << "Fine amount: Rs." << fine_amount << endl;
+        cout << ">> Fine amount: Rs." << fine_amount << endl;
     }
 
     string getProfessorId()
@@ -414,7 +422,7 @@ public:
     {
         if (list_of_books.size() > 0)
         {
-            cout << "Issued Books: " << endl;
+            cout << ">> Issued Books: " << endl;
             for (int i = 0; i < list_of_books.size(); i++)
             {
                 cout << "---------------------------------------" << endl;

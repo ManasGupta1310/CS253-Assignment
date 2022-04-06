@@ -1,8 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
-#include "librarian.h"
-#include "student.h"
-#include "professor.h"
+#include "Headers/librarian.h"
+#include "Headers/student.h"
+#include "Headers/professor.h"
 
 using namespace std;
 

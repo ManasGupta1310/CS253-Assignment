@@ -27,7 +27,7 @@ void studentPortal(Student student)
     vector<vector<string>> list_of_books;
     BookDatabase books(list_of_books);
     books.setListOfBooks();
-
+    student.setIssuedBooks();
     switch (response)
     {
     case 1:
@@ -49,11 +49,13 @@ void studentPortal(Student student)
     case 5:
         books.issue(student.getNumberOfIssuedBooksStudent(), student.getStudentId(), "student");
         books.setListOfBooks();
+        student.setIssuedBooks();
         studentPortal(student);
         break;
     case 6:
         books.returnBook(student.getNumberOfIssuedBooksStudent(), student.getStudentId(), "student");
         books.setListOfBooks();
+        student.setIssuedBooks();
         studentPortal(student);
         break;
     case 7:

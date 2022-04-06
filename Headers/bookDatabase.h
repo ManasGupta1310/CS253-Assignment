@@ -444,7 +444,7 @@ public:
             {
                 int found = 0;
 
-                cout << "Books issued to " << searchKey << ":" << endl;
+                cout << ">> Books issued to " << searchKey << ":" << endl;
                 while (getline(file, line))
                 {
                     row.clear();
@@ -563,12 +563,12 @@ public:
                     if (available == 1)
                     {
                         int response;
-                        cout << ">>Book is available for issuance!! Do you want to issue the book?\n"
+                        cout << ">> Book is available for issuance!! Do you want to issue the book?\n"
                              << endl;
                         cout << "1. Yes" << endl;
                         cout << "2. No" << endl;
                         cout << endl;
-                        cout << "Enter your choice: ";
+                        cout << ">> Enter your choice: ";
                         cin >> response;
                         cout << endl;
                         switch (response)
@@ -643,14 +643,14 @@ public:
                         cout << "1. Yes" << endl;
                         cout << "2. No" << endl;
                         cout << endl;
-                        cout << "Enter your choice: ";
+                        cout << ">> Enter your choice: ";
                         cin >> response;
                         cout << endl;
                         switch (response)
                         {
                         case 1:
                             book.book_return(id, role, isbn);
-                            cout << " Book successfully returned!" << endl;
+                            cout << ">> Book successfully returned!" << endl;
                             break;
                         case 2:
                             cout << ">> Book not returned!" << endl;
@@ -663,7 +663,7 @@ public:
                     }
                     else
                     {
-                        cout << "Book is not issued to you!" << endl;
+                        cout << ">> Book is not issued to you!" << endl;
                     }
                 }
             }

@@ -28,7 +28,7 @@ void professorPortal(Professor professor)
     vector<vector<string>> list_of_books;
     BookDatabase books(list_of_books);
     books.setListOfBooks();
-    
+    professor.setIssuedBooks();
     switch (response)
     {
     case 1:
@@ -50,11 +50,13 @@ void professorPortal(Professor professor)
     case 5:
         books.issue(professor.getNumberOfIssuedBooksProfessor(), professor.getProfessorId(), "professor");
         books.setListOfBooks();
+        professor.setIssuedBooks();
         professorPortal(professor);
         break;
     case 6:
         books.returnBook(professor.getNumberOfIssuedBooksProfessor(), professor.getProfessorId(), "professor");
         books.setListOfBooks();
+        professor.setIssuedBooks();
         professorPortal(professor);
         break;
     case 7:
