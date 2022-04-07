@@ -34,3 +34,52 @@ To run the code:
 - Run 'g++ -o libraryManagementSystem libraryManagementSystem.cpp & ./libraryManagementSystem'
 - The program will run now.
 
+-----------------------------------------------------------------------------------------------------------
+    Sample user are:
+
+    1. Name- Librarian
+        Id - librarian
+        Pass- 123
+        Role- librarian
+
+    2. Name- Student1
+        Id - student1
+        Pass- 123
+        Role- student
+
+    3. Name- Student2
+        Id - student2
+        Pass- 123
+        Role- student
+
+    4. Name- Professor1
+        Id - professor1
+        Pass- 123
+        Role- professor
+-----------------------------------------------------------------------------------------------------------
+    Sample Books are:
+
+    1. Name- Junior Level Books
+        Author - Amit Garg
+        ISBN- 978-93-5019-561-1
+        Publication- Reader's Zone
+
+    2. Name- Publish News Letter
+        Author - Amit Garg
+        ISBN- 978-43
+        Publication- MCA Department
+
+    3. Name- Client Server Computing
+        Author - Lalit Kumar
+        ISBN- 978-93-8067-432-1
+        Publication- Sun India Publications
+
+    4. Name- Data Structure Using C
+        Author - Sharad Kumar Verma
+        ISBN- 978-93-5163-389-1
+        Publication- Thakur Publications
+    
+    5. Name- Client Server Computing
+        Author - Sharad Kumar Verma
+        ISBN- 978-93-8067-432-2
+        Publication- Sun India Publications
