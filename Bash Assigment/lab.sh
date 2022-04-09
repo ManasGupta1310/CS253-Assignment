@@ -39,7 +39,6 @@ echo "" >> $2
 echo "--------------------------------------------------------" >>$2
 echo "Average of AdmissionRate with respect to Geography" >> $2
 echo "--------------------------------------------------------" >>$2
-echo "" >> $2
 echo "Geography: AverageAdmissionRate" >> $2
 awk -F"," '$6=="Mid-size City" {count++;sum+=$7} END{printf "Mid-size City: %.4f\n", sum/count}' $1 >> $2
 awk -F"," '$6=="Small City" {count++;sum+=$7} END{printf "Small City: %.4f\n", sum/count}' $1 >> $2

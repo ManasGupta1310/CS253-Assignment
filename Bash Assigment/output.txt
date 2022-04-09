@@ -1518,7 +1518,6 @@ Neumont University
 --------------------------------------------------------
 Average of AdmissionRate with respect to Geography
 --------------------------------------------------------
-
 Geography: AverageAdmissionRate
 Mid-size City: 0.6285
 Small City: 0.6654
