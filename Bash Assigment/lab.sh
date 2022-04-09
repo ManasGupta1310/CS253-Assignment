@@ -6,8 +6,7 @@ then
     echo ""
     echo "Command format: ./lab.sh inputFileName outputFileName"
     echo ""
-    echo ">> Input file shoudl be a CSV file (.csv)"
-    echo ">> Output file shoudl be a Text file (.txt)"
+    echo ">> Input file should be a CSV file (.csv)"
     exit 1
 fi
 
