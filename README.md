@@ -11,7 +11,8 @@ for the code.
 
 'userList.csv' is the file containing information about the books in the below given format:
 (User Name, User Id, User Pass, User Role, User Fine Amount, User Issued Book Count, *Book ISBN, *Issue Date, *Due Date)
-* signfies that the book information will be available only for the number of book count.
+<br>
+\* signfies that the book information will be available only for the number of book count.
 
 Since the file is in csv format which is comma(,) separated, having comma in user input will break down the code working. So please avoid writing comma in user input.
 
