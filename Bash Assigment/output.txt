@@ -1535,8 +1535,8 @@ Fringe Town: 0.6277
 --------------------------------------------------------
 List of top 5 colleges with highest MedianEarning
 --------------------------------------------------------
-Albany College of Pharmacy and Health Sciences Bachelor's Graduate Private Mid-Atlantic Small City 0.634 27 1195 40718 11879 8530 24930.5 21.0599995 80225 125600
-MCPHS University Bachelor's Graduate Private New England Large City 0.8921 24 1094 43966 9840 8066 25000 22.25 61624 113100
-University of the Sciences Bachelor's Graduate Private Mid-Atlantic Large City 0.5635 25 1165 49327 12508 8000 27000 19.6900005 82840.5 94000
-Massachusetts Institute of Technology Bachelor's Graduate Private New England Mid-size City 0.0815 34 1503 57010 58223 15617 13000 21.0100002 79076 86900
-Stevens Institute of Technology Bachelor's Graduate Private Mid-Atlantic Large Suburb 0.3816 30 1305 59479 14918 9474 26500 19.5400009 87408 79200
+Albany College of Pharmacy and Health Sciences | Median Earning: 125600
+MCPHS University | Median Earning: 113100
+University of the Sciences | Median Earning: 94000
+Massachusetts Institute of Technology | Median Earning: 86900
+Stevens Institute of Technology | Median Earning: 79200

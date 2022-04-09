@@ -60,5 +60,5 @@ echo "List of top 5 colleges with highest MedianEarning" >> $2
 echo "--------------------------------------------------------" >>$2
 
 sort -t , -k 16 -r -n input.csv > sample.csv
-awk -F"," 'NR<=5 {print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16}' sample.csv >> $2
+awk -F"," 'NR<=5 {print $1,"| Median Earning:",$16}' sample.csv >> $2
 rm sample.csv
